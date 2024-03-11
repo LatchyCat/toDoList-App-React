@@ -1,0 +1,60 @@
+/* Container for the entire TodoItem */
+.Box1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  /* Styles for the todo item, including completed and non-completed states */
+  .todo-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  /* Completed task style */
+  .completed .ToggleButton {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+
+  /* Box for the todo text and toggle button */
+  .Box2 {
+    flex-grow: 1;
+  }
+
+  .ToggleButton {
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  /* Adding some hover effects for better user feedback */
+  .ToggleButton:hover {
+    color: #555;
+  }
+
+  /* Box for the delete button */
+  .Box3 {
+    margin-left: 10px;
+  }
+
+  .Box3 button {
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .Box3 button:hover {
+    background-color: #ff2e2e;
+  }

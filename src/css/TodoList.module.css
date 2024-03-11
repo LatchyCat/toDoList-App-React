@@ -1,0 +1,41 @@
+/* Container for the todo list items and the input/button area */
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  /* Styling for the input box area */
+  .Box4 {
+    margin-bottom: 10px;
+  }
+
+  .Box4 input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 500px; /* Adjust max-width as needed */
+    box-sizing: border-box;
+    margin-right: 5px;
+  }
+
+  /* Styling for the 'Add' button area */
+  .box5 { /* Note: Ensure your class names are consistent. Your original code had 'Box4' and 'box5'. */
+    margin-bottom: 20px;
+  }
+
+  .box5 button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .box5 button:hover {
+    background-color: #0056b3;
+  }
