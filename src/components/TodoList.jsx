@@ -51,22 +51,27 @@ function TodoList() {
   return (
 
     <>
-    <div className="todo-list">
-      {tasks.map(task => (
-        <TodoItem
-          key={task.id}
-          task={task}
-          deleteTask={deleteTask}
-          toggleCompleted={toggleCompleted}
-        />
-      ))}
-      <div className={style.Box4}>
-          <input
-            value={text}
-            onChange={e => setText(e.target.value)}
+    <div className={style.Biggie}>
+      <div className="todo-list">
+        {tasks.map(task => (
+          <TodoItem
+            key={task.id}
+            task={task}
+            deleteTask={deleteTask}
+            toggleCompleted={toggleCompleted}
           />
+        ))}
+        <div className={style.Box4}>
+            <div className={style.BiggieBag1}>
+              <input
+                value={text}
+                onChange={e => setText(e.target.value)}
+              />
+                    </div>
+            </div>
+
+        <div className={style.box5}> <button onClick={() => addTask(text)}>Add</button> </div>
       </div>
-      <div className={style.box5}> <button onClick={() => addTask(text)}>Add</button> </div>
     </div>
     </>
   );

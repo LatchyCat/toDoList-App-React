@@ -1,60 +1,92 @@
-/* Container for the entire TodoItem */
+/* Container for each todo item with a cool random effect */
 .Box1 {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  animation: boxAnimation 5s infinite alternate;
+}
 
-  /* Styles for the todo item, including completed and non-completed states */
-  .todo-item {
-    display: flex;
-    align-items: center;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 5px;
-    width: 80%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
+/* Styles for the todo item itself */
+.todo-item {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  width: 90%;
+  max-width: 600px;
+}
 
-  /* Completed task style */
-  .completed .ToggleButton {
-    text-decoration: line-through;
-    color: #aaa;
-  }
+/* Box containing the checkbox and text with a cool random effect */
+.Box2 {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  animation: boxAnimation 5s infinite alternate;
+}
 
-  /* Box for the todo text and toggle button */
-  .Box2 {
-    flex-grow: 1;
-  }
+/* Styles for the text */
+.Text {
+  margin-left: 10px;
+}
 
-  .ToggleButton {
-    background: none;
-    border: none;
-    text-align: left;
-    width: 100%;
-    cursor: pointer;
-  }
+/* Styles for completed tasks with an RGB effect */
+.Completed {
+  color: #bbb;
+  text-decoration: line-through;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, yellow, purple, hotpink);
+}
 
-  /* Adding some hover effects for better user feedback */
-  .ToggleButton:hover {
-    color: #555;
-  }
+/* Styles for the checkbox with a cool random effect */
+.Checkbox {
+  cursor: pointer;
+  animation: checkboxAnimation 2s infinite;
+}
 
-  /* Box for the delete button */
-  .Box3 {
-    margin-left: 10px;
-  }
+/* Styles for the delete button with an RGB effect */
+.Box3 button {
+  background-image: linear-gradient(
+    45deg,
+    rgb(0, 64, 255),
+    rgb(255, 0, 221),
+    rgb(255, 166, 0)
+  );
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
 
-  .Box3 button {
-    background-color: #ff4747;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+.Box3 button:hover {
+  background-color: #ff3333;
+}
 
-  .Box3 button:hover {
-    background-color: #ff2e2e;
+@keyframes boxAnimation {
+  0% {
+    transform: translateX(0);
   }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes checkboxAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
